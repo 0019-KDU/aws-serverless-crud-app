@@ -51,7 +51,7 @@ const handleResponse = async (response) => {
 export const userApi = {
     // Get all users
     getAll: async () => {
-        const response = await fetch(`${API_URL}/users`, {
+        const response = await fetch(`${API_URL}/user`, {
             headers: getHeaders(),
         });
         return handleResponse(response);
@@ -59,7 +59,7 @@ export const userApi = {
 
     // Get user by ID
     getById: async (userId) => {
-        const response = await fetch(`${API_URL}/users/${userId}`, {
+        const response = await fetch(`${API_URL}/user/${userId}`, {
             headers: getHeaders(),
         });
         return handleResponse(response);
@@ -67,7 +67,7 @@ export const userApi = {
 
     // Create new user
     create: async (userData) => {
-        const response = await fetch(`${API_URL}/users`, {
+        const response = await fetch(`${API_URL}/user`, {
             method: 'POST',
             headers: getHeaders(),
             body: JSON.stringify(userData),
@@ -77,7 +77,7 @@ export const userApi = {
 
     // Update user
     update: async (userId, userData) => {
-        const response = await fetch(`${API_URL}/users/${userId}`, {
+        const response = await fetch(`${API_URL}/user/${userId}`, {
             method: 'PUT',
             headers: getHeaders(),
             body: JSON.stringify(userData),
@@ -87,7 +87,7 @@ export const userApi = {
 
     // Delete user
     delete: async (userId) => {
-        const response = await fetch(`${API_URL}/users/${userId}`, {
+        const response = await fetch(`${API_URL}/user/${userId}`, {
             method: 'DELETE',
             headers: getHeaders(),
         });
