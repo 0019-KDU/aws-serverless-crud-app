@@ -46,7 +46,7 @@ function App() {
 
     useEffect(() => {
         if (auth.isAuthenticated && auth.user?.access_token) {
-            setAccessToken(auth.user.access_token);
+            setAccessToken(auth.user.id_token);
             fetchUsers();
         }
     }, [auth.isAuthenticated, auth.user?.access_token, fetchUsers]);
