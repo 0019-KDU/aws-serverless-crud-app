@@ -272,8 +272,6 @@ export const deleteUser = async (event) => {
 
 ## 4. AWS Lambda Layers
 
-![Lambda Layer](images/Lambda_dashboard.png)
-
 Lambda Layers share the AWS SDK and utilities across functions — keeping each deployment package small and clean.
 
 ### Layer Contents
@@ -384,8 +382,6 @@ const cognitoAuthConfig = {
 
 ### Cognito JWT Authorizer Setup
 
-![Cognito Authorizer](images/cognito.png)
-
 1. Go to **API Gateway** → your API → **Authorization**
 2. Click **Manage authorizers** → **Create**
 3. Configure:
@@ -432,8 +428,6 @@ CloudFront serves as both the CDN for the React app and a reverse proxy for the 
 | `/*` (default) | S3 Bucket | CachingOptimized | — |
 
 ### Critical: Forward Authorization Header
-
-![CloudFront Behavior](images/cloudfront_dashboard.png)
 
 For the `/user*` behavior, set **Origin request policy** to `AllViewerExceptHostHeader`.
 
